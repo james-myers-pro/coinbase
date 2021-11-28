@@ -10,7 +10,6 @@ Created on Sun Nov 14 12:52:45 2021
 import websocket, json
 import pandas as pd
 from datetime import timedelta
-#import plotly.express as px
 
 
 cbws = "wss://ws-feed.exchange.coinbase.com"
