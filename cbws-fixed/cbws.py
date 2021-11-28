@@ -13,7 +13,7 @@ from datetime import timedelta
 
 
 cbws = "wss://ws-feed.exchange.coinbase.com"
-#this message provides the last trade for Chainlink
+#this message provides the last trade for Chainlink 
 message = {"type": "subscribe",
                "channels":[{
                    "name": "ticker",
