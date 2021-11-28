@@ -10,10 +10,10 @@ Created on Sun Nov 14 12:52:45 2021
 import websocket, json
 import pandas as pd
 from datetime import timedelta
-#import plotly.express as px
 
 
 cbws = "wss://ws-feed.exchange.coinbase.com"
+#this message provides the last trade for Chainlink 
 message = {"type": "subscribe",
                "channels":[{
                    "name": "ticker",
@@ -21,7 +21,6 @@ message = {"type": "subscribe",
                    }]
                }
 
-check = 0
 
 
 
@@ -29,7 +28,6 @@ def on_open(ws=cbws,message=message):
     global check
     print('websocket open')
     ws.send(json.dumps(message))
-    check = 1
 
 def on_message(ws=cbws,message=message):
     test = json.loads(message)
