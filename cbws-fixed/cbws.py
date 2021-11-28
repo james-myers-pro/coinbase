@@ -41,5 +41,5 @@ def on_message(ws=cbws,message=message):
 
 #def on_data(ws=cbws,message=message):
     
-ws = websocket.WebSocketApp(cbws,on_message=on_message,on_open=on_open,header={"volume_24h":""})
+ws = websocket._app.WebSocketApp(cbws,on_message=on_message,on_open=on_open,header={"volume_24h":""})
 ws.run_forever()
